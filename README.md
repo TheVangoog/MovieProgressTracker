@@ -22,7 +22,6 @@ Moderná webová aplikácia na sledovanie a objavovanie vašich obľúbených se
 * **Supabase** - Backend a autentifikácia
 * **TMDB API** - Dáta o filmoch a TV seriáloch
 
-## 🚀 Začíname
 
 ### Požiadavky
 * Node.js (v16 alebo vyššia)
@@ -69,10 +68,6 @@ src/
 ## 🌙 Tmavý režim
 Prepínajte medzi svetlou a tmavou témou pomocou prepínača v navigačnej lište. Preferencia témy je uložená v localStorage.
 
-## 📝 Licencia
-Tento projekt je vytvorený na vzdelávacie účely (predmet Frontendové Technológie).
 
 ## 👨‍💻 Autor
 Ivan Timoshkin
-
-Vytvorené s ❤️ pomocou Vue 3 a Tailwind CSS
