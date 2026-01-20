@@ -1,7 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import ShowDetailView from '../views/ShowDetailView.vue';
-
+import ShowDetailView from '../views/ShowDetailView.vue'
+import AboutView from '../views/AboutView.vue'
+import Browse from '../views/Browse.vue'
+import ProfileView from '../views/ProfileView.vue'
+import AuthView from '../views/AuthView.vue'
+import FeedbackView from '../views/FeedbackView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -14,31 +18,29 @@ const router = createRouter({
     {
       path: '/about',
       name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/AboutView.vue'),
+      component: AboutView,
     },
     {
       path: '/browse',
       name: 'browse',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/Browse.vue'),
+      component: Browse,
     },
     {
       path: '/profile',
       name: 'profile',
-      component: () => import('../views/ProfileView.vue'),
+      component: ProfileView,
     },
     {
       path: '/auth',
       name: 'auth',
-      component: () => import('../views/AuthView.vue'),
+      component: AuthView,
     },
     { path: '/show/:id', name: 'ShowDetailView',
       component: ShowDetailView },
+    {
+        path: '/feedback', name: 'feedback',
+         component: FeedbackView
+    },
   ],
 })
 

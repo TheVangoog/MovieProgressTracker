@@ -2,27 +2,28 @@
 import { defineComponent } from 'vue'
 import { useAuthStore } from './stores/auth'
 import Navigation from './components/Navigation.vue'
+import AppFooter from './components/AppFooter.vue'
 
 export default defineComponent({
   components: {
-    Navigation
+    Navigation,
+    AppFooter,
   },
   data() {
     return {
-      authStore: useAuthStore()
+      authStore: useAuthStore(),
     }
   },
   mounted() {
     this.authStore.initialize()
-  }
+  },
 })
 </script>
 
 <template>
-  <Navigation/>
-  <RouterView/>
+  <Navigation />
+  <RouterView />
+  <AppFooter />
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

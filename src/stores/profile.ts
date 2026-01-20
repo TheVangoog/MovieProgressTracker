@@ -30,7 +30,7 @@ export const useProfileStore = defineStore("profile", {
       name: "Film Lover",
       email: "user@example.com",
       avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=FilmLover",
-      bio: "Passionate about TV shows and movies.",
+      bio: "TV shows and movies.",
       joinDate: new Date().toLocaleDateString(),
     } as UserProfile,
     savedShows: [] as SavedShow[],
@@ -112,7 +112,7 @@ export const useProfileStore = defineStore("profile", {
 
       try {
         const existing = this.savedShows.find(s => s.tmdb_id === id && s.user_id === userId);
-        
+
         if (existing) {
           // Update existing
           const { error } = await supabase
@@ -155,7 +155,7 @@ export const useProfileStore = defineStore("profile", {
                 .eq('user_id', userId);
 
               if (updateError) throw updateError;
-              
+
               // Add to local array if not present
               if (!existing) {
                 this.savedShows.push({
