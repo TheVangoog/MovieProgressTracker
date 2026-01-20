@@ -1,54 +1,78 @@
-# FilmProject
+# 🎬 FilmProject
+Moderná webová aplikácia na sledovanie a objavovanie vašich obľúbených seriálov a filmov.
 
-This template should help get you started developing with Vue 3 in Vite.
+## ✨ Funkcie
+* **Prehliadať seriály** - Preskúmajte trendy a populárne TV seriály
+* **Vyhľadávanie** - Rýchlo nájdite svoje obľúbené seriály
+* **Tmavý režim** - Prepínajte medzi svetlou a tmavou témou
+* **Responzívny dizajn** - Funguje perfektne na počítači aj mobile
+* **Autentifikácia používateľov** - Bezpečné prihlásenie cez Supabase
+* **Systém spätnej väzby** - Zdieľajte vaše myšlienky a návrhy
 
-## Recommended IDE Setup
+## 🛠️ Technológie
+* **Vue 3** - Progresívny JavaScript framework
+* **TypeScript** - Typovo bezpečný vývoj
+* **Vite** - Rýchly build nástroj
+* **Tailwind CSS** - Utility-first CSS framework
+* **Vuetify** - Knižnica Material Design komponentov
+* **DaisyUI** - Knižnica Tailwind CSS komponentov
+* **Vue Router** - Client-side routing
+* **Pinia** - Správa stavu
+* **VueUse** - Kolekcia Vue composition utilities
+* **Supabase** - Backend a autentifikácia
+* **TMDB API** - Dáta o filmoch a TV seriáloch
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## 🚀 Začíname
 
-## Recommended Browser Setup
+### Požiadavky
+* Node.js (v16 alebo vyššia)
+* npm alebo yarn
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+### Inštalácia
+```bash
+# Naklonujte repozitár
+git clone https://github.com/yourusername/filmproject.git
 
-## Type Support for `.vue` Imports in TS
+# Prejdite do adresára projektu
+cd filmproject
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
+# Nainštalujte závislosti
 npm install
-```
 
-### Compile and Hot-Reload for Development
+# Nastavte premenné prostredia
+# Vytvorte súbor .env a pridajte vaše TMDB a Supabase prihlasovacie údaje
+VITE_TMDB_API_KEY=vasa_tmdb_api_key
+VITE_SUPABASE_URL=vasa_supabase_url
+VITE_SUPABASE_ANON_KEY=vas_supabase_kluc
 
-```sh
+# Spustite vývojový server
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
+## 📁 Štruktúra projektu
+```
+src/
+├── components/     # Znovupoužiteľné Vue komponenty
+├── stores/        # Pinia stores
+├── views/         # Komponenty stránok
+├── router/        # Konfigurácia Vue Router
+└── assets/        # Statické súbory
 ```
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+## 🎨 Hlavné komponenty
+* **Hero sekcia** - Pútavá úvodná stránka s animáciami
+* **Kategórie prehliadania** - Zoznamy trendových a populárnych seriálov
+* **Filmové karty** - Interaktívne karty s hover tooltipmi
+* **Formulár spätnej väzby** - Zber spätnej väzby od používateľov
+* **Navigácia** - Responzívna navigačná lišta s prepínačom tmavého režimu
 
-```sh
-npm run test:unit
-```
+## 🌙 Tmavý režim
+Prepínajte medzi svetlou a tmavou témou pomocou prepínača v navigačnej lište. Preferencia témy je uložená v localStorage.
 
-### Lint with [ESLint](https://eslint.org/)
+## 📝 Licencia
+Tento projekt je vytvorený na vzdelávacie účely (predmet Frontendové Technológie).
 
-```sh
-npm run lint
-```
+## 👨‍💻 Autor
+Ivan Timoshkin
+
+Vytvorené s ❤️ pomocou Vue 3 a Tailwind CSS
