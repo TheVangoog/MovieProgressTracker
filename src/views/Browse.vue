@@ -1,11 +1,33 @@
-<script setup lang="ts">
-import { ref, computed } from "vue";
+<script lang="ts">
+import { defineComponent } from "vue";
 import BrowseCategory from "@/components/BrowseCategory.vue";
 import { buildTrendingTvEndpoint, buildPopularTvEndpoint, buildSearchTvEndpoint } from "@/stores/tmdb";
 
-const searchQuery = ref("");
-
-const searchEndpoint = computed(() => buildSearchTvEndpoint(searchQuery.value));
+export default defineComponent({
+  name: "BrowseView",
+  components: {
+    BrowseCategory
+  },
+  data() {
+    return {
+      searchQuery: ""
+    };
+  },
+  computed: {
+    searchEndpoint(): string {
+      return buildSearchTvEndpoint(this.searchQuery);
+    },
+    trendingEndpoint(): string {
+      return buildTrendingTvEndpoint();
+    },
+    popularEndpoint(): string {
+      return buildPopularTvEndpoint();
+    },
+    hasSearchQuery(): boolean {
+      return this.searchQuery.trim() !== '';
+    }
+  }
+});
 </script>
 
 <template>
@@ -27,7 +49,7 @@ const searchEndpoint = computed(() => buildSearchTvEndpoint(searchQuery.value));
 
     <!-- Search Results -->
     <BrowseCategory
-      v-if="searchQuery.trim() !== ''"
+      v-if="hasSearchQuery"
       title="Search Results"
       :endpoint="searchEndpoint"
     />
@@ -35,13 +57,13 @@ const searchEndpoint = computed(() => buildSearchTvEndpoint(searchQuery.value));
     <!-- Trending -->
     <BrowseCategory
       title="Trending"
-      :endpoint="buildTrendingTvEndpoint()"
+      :endpoint="trendingEndpoint"
     />
 
     <!-- Popular -->
     <BrowseCategory
       title="Popular"
-      :endpoint="buildPopularTvEndpoint()"
+      :endpoint="popularEndpoint"
     />
   </main>
 </template>
