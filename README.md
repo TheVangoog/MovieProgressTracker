@@ -39,10 +39,8 @@ cd filmproject
 npm install
 
 # Nastavte premenné prostredia
-# Vytvorte súbor .env a pridajte vaše TMDB a Supabase prihlasovacie údaje
-VITE_TMDB_API_KEY=vasa_tmdb_api_key
-VITE_SUPABASE_URL=vasa_supabase_url
-VITE_SUPABASE_ANON_KEY=vas_supabase_kluc
+# Skopírujte .env.example do .env a doplňte vaše TMDB a Supabase kľúče
+cp .env.example .env
 
 # Spustite vývojový server
 npm run dev
